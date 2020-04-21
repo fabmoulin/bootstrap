@@ -1,0 +1,17 @@
+/** style css exercice 3**/
+.mb-5 {
+    margin: ($spencer * 3);
+}
+
+.mb-4 {
+    margin:($spencer * 1.5);
+}
+
+/** style css exercice 5**/
+.p-3 {
+    padding:$spencer ;
+}
+
+.mb-1 {
+    margin:$spencer;
+}
