@@ -129,8 +129,8 @@
         <!--Exercice 5-->
         <h2>Exercice 5</h2>
       <div class="container-fluid"><!--déclaration de taille d'écran, fluide = tous écrans-->
-        <div class="row text-left mb-1"><!--placement colonne, texte aligné à gauche-->
-            <div class="col-md-4 border right white p-3"><!--prendre 1/3 de la longueur de la page, bordure blanche à droite--> <!--longueur par défaut = 12 colonnes-->
+        <div class="row bg-info text-left mb-3"><!--placement colonne, texte aligné à gauche, marge basse avec valeur par défaut (3)-->
+            <div class="col-md-4 border right white p-3"><!--prendre 1/3 de la longueur de la page, bordure blanche à droite, padding avec valeur par défaut (3)--> <!--longueur par défaut = 12 colonnes-->
                 <p>premier paragraphe</p>
             </div>
             <div class="col-md-4 border right white p-3">
@@ -140,8 +140,8 @@
                 <p>troisieme paragraphe</p>
             </div>
         </div>
-        <div class="row text-left"><!--placement colonne, texte aligné à gauche-->
-            <div class="col-md-4 border right white p-3"><!--prendre 1/3 de la longueur de la page, bordure blanche à droite--> <!--longueur par défaut = 12 colonnes-->
+        <div class="row bg-primary text-left"><!--placement colonne, texte aligné à gauche-->
+            <div class="col-md-4 border right white p-3"><!--prendre 1/3 de la longueur de la page, bordure blanche à droite, padding avec valeur par défaut (3)--> <!--longueur par défaut = 12 colonnes-->
                 <p>quatrieme paragraphe</p>
             </div>
             <div class="col-md-4 border right white p-3">
@@ -156,44 +156,55 @@
     <!--Exercice 6-->
         <h2>Exercice 6</h2>
     <div class="container-fluid"><!--déclaration de taille d'écran, fluide = tous écrans-->
-        <div class="card" style="width: 100%;"><!--creation de la card à 100% de l'écran-->
-            <div class="card-body"><!--corps de la card-->
-                <h2 class="card-title text-center">Formations by "La Manu"</h2><!--titre de la card centré-->
-                    <div class="text-center"><!--contenu central de la fenetre modale-->
-                <a href="#" class="btn btn-primary">C#</a> <a href="#" class="btn btn-primary">.NET</a><!--boutons-->
+        <div class="row"><!--création de la ligne sur toute la longueur-->
+            <div class="col-md-12"><!--création de la colonne sur les 12 de base-->
+                <div class="card text-center"><!--creation de la card, texte centré à 100% de l'écran-->
+                    <div class="card-body"><!--corps de la card-->
+                    <h2 class="card-title text-center">Formations by "La Manu"</h2><!--titre de la card centré-->
+                    <div class="badge badge-info"><!--badge=mise en forme du style demandé (encadré bleu)-->
+                        <p>C#</p>
                     </div>
+                    <div class="badge badge-info"><!--badge=mise en forme du style demandé (encadré bleu)-->
+                        <p>.NET</p>
+                    </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
     <!--Exercice 7-->
         <h2>Exercice 7</h2>
-        <div class="container-fluid"><!--déclaration de taille d'écran, fluide = tous écrans-->
-            <div class="card" style="width: 50%;"><!--creation de la card à 50% de l'écran-->
-                <div class="card-body"><!--corps de la card-->
-                    <h2 class="card-title text-center">La Manu Le Havre</h2><!--titre de la card centré-->
-                    <h4 class="card-subtitle text-center">L'école des métiers du Numérique.</h4><!--sous-titre de la card centré-->
-                        <div class="text-center"><!--div pour le bouton à centrer-->
-                            <button type="button" data-toggle="modal" data-target="#infos" class="btn btn-primary">+ d'infos</button><!--déclencheur de la fenetre modale-->
-                        </div>
-                            <div class="modal" id="infos"><!--établi un lien entre déclencheur et contenu de la fenetre modale-->
-                                <div class="modal-dialog"><!--fixe la position de la fenetre-->
-                                    <div class="modal-content"><!--fixe le fond des bordures-->
-                                    <div class="modal-header"><!--header de la fenetre-->
-                                    <h4 class="modal-title">La Manu Le Havre</h4><!--titre de la fenetre modale-->          
-                                </div>
-                                <div class="modal-body bg-primary text-center text-white"><!--contenu central de la fenetre modale-->
-                                https://lamanu.fr/le-havre
-                                </div>
-                                <div class="modal-footer"><!--footer de la fenetre modale-->
-                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">X Fermer</button><!--bouton Fermer de la fenetre modale-->
+    <div class="container-fluid"><!--déclaration de taille d'écran, fluide = tous écrans-->
+        <div class="row"><!--création de la ligne sur toute la longueur-->
+            <div class="col-md-12"><!--création de la colonne sur les 12 de base-->
+                <div class="card text-center"><!--creation de la card-->
+                    <div class="card-body"><!--corps de la card-->
+                        <h2>La Manu Le Havre</h2><!--titre de la card-->
+                        <p>L'école des métiers du Numérique.</p><!--paragraphe de la card-->
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalTarget">+ d'infos</button><!--création du bouton fond bleu, data-toggle=déclenchement de la fenêtre-->
+                            <div class="modal fade" id="modalTarget" tabindex="-1" role="dialog" aria-labelledby="modalTarget" aria-hidden="true"><!--établi un lien entre déclencheur et contenu de la fenetre modale-->
+                                <div class="modal-dialog" role="document"><!--fixe la position de la modal-->
+                                    <div class="modal-content"><!--fixe le contenu de la modal-->
+                                        <div class="modal-header"><!--header de la fenetre modal-->
+                                        <h3 class="modal-title">La Manu Le Havre</h3><!--titre de la fenetre modale-->
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="fermer"><span aria-hidden="true">&times;</span></button><!--bouton X en haut à droite-->      
+                                        </div>
+                                        <div class="modal-body bg-primary text-center text-white"><!--contenu central de la fenetre modale-->
+                                        <p>https://lamanu.fr/le-havre</p>
+                                        </div>
+                                        <div class="modal-footer"><!--footer de la fenetre modale-->
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-label="Fermer">X Fermer</button><!--bouton Fermer de la fenetre modale-->
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
+ 
    
 <!--Les Scripts de Bootstrap se mettent toujours à la fin du body-->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
